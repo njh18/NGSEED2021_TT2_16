@@ -2,7 +2,8 @@
 import axios from "axios";
 
 // Getting the API_URL and input in
-const API_URL = "http://localhost:3000/api/auth/";
+const API_URL =
+    "https://u8fpqfk2d4.execute-api.ap-southeast-1.amazonaws.com/techtrek2020/login";
 
 const register = (username, email, password) => {
     return axios.post(API_URL + "signup", {
