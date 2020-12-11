@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.json({dataExists: 'wrong'});
+  res.json({dataExists: 'ijkjkl'});
 });
 
 module.exports = router;

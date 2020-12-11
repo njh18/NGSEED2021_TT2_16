@@ -70,9 +70,14 @@ const Login = (props) => {
     <div className="col-md-12">
       <div className="card card-container">
         <img
-          src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-          alt="profile-img"
-          className="profile-img-card"
+          src="https://internet-banking.dbs.com.sg/IB/dbs/images/desktoplogo.png"
+          style={{
+            display: "block",
+            padding: "30px",
+            width: "50%",
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
         />
 
         <Form onSubmit={handleLogin} ref={form}>
