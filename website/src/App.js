@@ -8,18 +8,18 @@ import Login from "./components/Login";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
 import BoardUser from "./components/BoardUser";
-import accountBalance from "./components/accountBalance";
+import Wallet from "./components/Wallet";
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState(undefined);
 
-  // useEffect(() => {
-  //   const user = AuthService.getCurrentUser();
+  useEffect(() => {
+    const user = AuthService.getCurrentUser(16);
 
-  //   if (user) {
-  //     setCurrentUser(user);
-  //   }
-  // }, []);
+    if (user) {
+      setCurrentUser(user);
+    }
+  }, []);
 
   const logOut = () => {
     AuthService.logout();
@@ -42,7 +42,12 @@ const App = () => {
           <div className="navbar-nav ml-auto">
             <li className="nav-item">
               <Link to={"/profile"} className="nav-link">
-                {currentUser.username}
+                Profile
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to={"/wallet"} className="nav-link">
+                Wallet
               </Link>
             </li>
             <li className="nav-item">
@@ -62,9 +67,7 @@ const App = () => {
           <Route exact path="/" component={Login} />
           <Route exact path="/profile" component={Profile} />
           <Route path="/user" component={BoardUser} />
-          <Route path="/accountBalance" component={accountBalance} />
-          {/* <Route path="/mod" component={BoardModerator} />
-          <Route path="/admin" component={BoardAdmin} /> */}
+          <Route path="/wallet" component={Wallet} />
         </Switch>
       </div>
     </div>
