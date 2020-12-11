@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import Profile from "./components/Profile";
 import BoardUser from "./components/BoardUser";
 import Wallet from "./components/Wallet";
+import DisplayTransaction from "./components/DisplayTransaction";
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -51,6 +52,11 @@ const App = () => {
               </Link>
             </li>
             <li className="nav-item">
+              <Link to={"/history"} className="nav-link">
+                History
+              </Link>
+            </li>
+            <li className="nav-item">
               <a href="/" className="nav-link" onClick={logOut}>
                 LogOut
               </a>
@@ -68,6 +74,7 @@ const App = () => {
           <Route exact path="/profile" component={Profile} />
           <Route path="/user" component={BoardUser} />
           <Route path="/wallet" component={Wallet} />
+          <Route path="/history" component={DisplayTransaction} />
         </Switch>
       </div>
     </div>
