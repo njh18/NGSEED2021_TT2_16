@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const accountBalance = () => {
+const Wallet= () => {
   // to be changed with api call
   var accountDetails = [
     {
@@ -65,4 +65,4 @@ const accountBalance = () => {
   return <div className="row">{elements}</div>;
 };
 
-export default accountBalance;
+export default Wallet;
