@@ -15,15 +15,15 @@ const register = (username, password) => {
 const login = (username, password) => {
   return axios
     .post(API_URL, {
+      headers: {
+        "x-api-key": "hCzRYFQ51S4XPWVI5a7Dy8pHw6uiDmfq4CJpUfcZ",
+      },
       username,
       password,
     })
     .then((response) => {
       if (response.data.accessToken) {
-        localStorage.setItem(
-          "user",
-          "hCzRYFQ51S4XPWVI5a7Dy8pHw6uiDmfq4CJpUfcZ"
-        );
+        localStorage.setItem("user", JSON.stringify(response.data));
       }
 
       return response.data;
