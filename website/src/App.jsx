@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import Profile from "./components/Profile";
 import BoardUser from "./components/BoardUser";
 import accountBalance from "./components/accountBalance";
+import DisplayTransaction from "./components/DisplayTransaction";
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -62,6 +63,7 @@ const App = () => {
           <Route exact path="/" component={Login} />
           <Route exact path="/profile" component={Profile} />
           <Route path="/user" component={BoardUser} />
+          <Route path="/viewTransaction" component={DisplayTransaction} />
           <Route path="/accountBalance" component={accountBalance} />
           {/* <Route path="/mod" component={BoardModerator} />
           <Route path="/admin" component={BoardAdmin} /> */}

@@ -48,7 +48,8 @@ const Login = (props) => {
         () => {
           props.history.push("/profile");
           window.location.reload();
-        },
+        }
+        ,
         (error) => {
           const resMessage =
             (error.response &&
