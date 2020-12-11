@@ -29,7 +29,7 @@ const DisplayTransaction = (props) => {
       
       },
       (error) => {
-        // const _content =
+        const _content =
           (error.response && error.response.data) ||
           error.message ||
           error.toString();
